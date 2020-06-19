@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <% if (messages.error) { %>
+    <%= messages.error %>
+    <% } %>
+    
+    <div class="myform">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+                <div>
+                    <div>
+                        <label for="email"> E-Mail </label>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password"> Password </label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+                </div>
+            </form>
+            <a href="/register">Register</a>        
+    </div>
+</body>
+</html>
+
+

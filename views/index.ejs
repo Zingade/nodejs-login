@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="myform">
+        <h1>Hi <%= name %> </h1>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Log Out</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="myform">
+    <h1>Register</h1>
+        <form action="/register" method="POST">
+        <div>
+            <label for="name"> Name </label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email"> E-Mail </label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password"> Password </label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Register</button>
+    </form>
+    <a href="/login">Login</a></div>
+</body>
+</html>

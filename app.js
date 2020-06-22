@@ -26,7 +26,7 @@ app.set('view-engine','ejs');
 app.use(express.urlencoded({extended:false}))
 app.use(flash());
 app.use(esession({
-  secret: process.env.SESSION_SECRET,
+  secret: 'secret',
   resave:false,
   saveUninitialized:false
 }))

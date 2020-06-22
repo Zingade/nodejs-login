@@ -8,6 +8,8 @@ const flash = require('express-flash');
 var esession = require('express-session');
 const methodOveride = require('method-override');
 
+const PORT = process.env.PORT || 3000;
+
 const intiatizePassport = require('./passport-config');
 const { Passport } = require('passport');
 intiatizePassport(
@@ -88,7 +90,7 @@ app.delete('/logout',(req,res)=>{
   res.redirect('/login')
 })
 
-app.listen(3000, function(){
+app.listen(PORT, function(){
   console.log("Express server listening on port ",3000);
 });
 

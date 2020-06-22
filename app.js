@@ -8,7 +8,7 @@ const flash = require('express-flash');
 var esession = require('express-session');
 const methodOveride = require('method-override');
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = process.env.PORT || '3000';
 
 const intiatizePassport = require('./passport-config');
 const { Passport } = require('passport');
@@ -83,26 +83,6 @@ function checkNotAuthenticated(req, res, next){
     return
   }
   next();
-}
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
 }
 
 

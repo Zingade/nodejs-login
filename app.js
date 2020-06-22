@@ -92,6 +92,8 @@ app.delete('/logout',(req,res)=>{
   res.redirect('/login')
 })
 
-app.listen(port);
-
+// start the server listening for requests
+app.listen(process.env.PORT || 3000, 
+  () => console.log("Server is running..."));
+  
 module.exports = app;
